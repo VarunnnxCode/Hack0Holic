@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css"> -->
+
+    <title>Hackathon</title>
+</head>
+<body>
+
+    <div class="nav">
+        <img src="images/logo.png" alt="svce_logo" width="250" >
+            <h2>Map for SVCE</h2>
+        <button>About us </button>
+    </div>
+<div class="mainn">
+    <div class="hero">
+        <div class="form">
+            <form id="get-data" >
+                <label for="from"><span>Current Location</span></label>
+                <br>
+                <select name="from" id="from" class="choose">
+                    <option value="" selected>--Select--</option>
+                    <option value="SVCE 5th Block">Block 5</option>
+                    <option value="SVCE College Bus Parking Area">Bus Bay</option>
+
+                </select>
+                <br>
+                <label for="to">Destination</label>
+                <br>
+                <select name="to" id="to" class="choose">
+                    <option value="" selected>--Select--</option>   
+                    <option value="SVCE Central Library">Library</option>   
+
+                </select>
+            </form>
+            <button class="send" onclick="CalculateRoute();">Get Route</button>
+        </div>
+        <div class="fluid">
+            <div id="map">
+
+            </div>
+        </div>
+         
+    </div>
+    <div id="op">
+
+    </div>
+</div>
+
+<!---all places-->
+<div class="categories">
+<div id="main-content">
+    <h2 id="menu-categories-title" class="text-center" style="color:white;">KEY PLACES</h2>
+
+    <section class="row">
+      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="280" height="230px" src="images/MPH.png" alt="Multi Purpose Hall">
+            <span>OAT</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="280" height="230" src="images/OAT.jpg" alt="Multi Purpose Hall">
+            <span>Temple</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="280" height="230" src="images/MEDICAL CENTRE.jpeg" alt="Multi Purpose Hall">
+            <span>Medical Centre</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="280" height="230" src="images/CANTEEN.jpeg" alt="Multi Purpose Hall">
+            <span>Canteen</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="280" height="230" src="images/TEMPLE.png" alt="Multi Purpose Hall">
+            <span>Temple</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="280" height="230" src="images/BUS BAY.png" alt="Multi Purpose Hall">
+            <span>Bus Bay</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="280" height="230" src="images/ADMIN BLOCK.png" alt="Multi Purpose Hall">
+            <span>Admin Block</span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+        <a href="single-category.html">
+          <div class="category-tile">
+            <img width="280" height="230" src="images/LIBRARY.png" alt="Multi Purpose Hall">
+            <span>Library</span>
+          </div>
+        </a>
+      </div>
+     </section>
+
+  </div>
+</div>
+
+    <!-- AIzaSyAaJxvy671oUa0T2d--ImBbUoZIaxwa6EE
+key=AIzaSyCqd1XS0Jt-VUrhm_x1nY9bmQEk5xwf8Sc -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqd1XS0Jt-VUrhm_x1nY9bmQEk5xwf8Sc&libraries=places"></script>
+    <script src="js/map.js"></script>
+</body>
+</html>
